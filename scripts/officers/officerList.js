@@ -3,12 +3,12 @@ import { useOfficers, getOfficers} from './OfficersProvider.js'
 import { officer } from './officer.js'
 
 
-export const OfficerList = () => {
+const OfficerList = () => {
     getOfficers().then(() => {
         let Officers = useOfficers();
         
         let officerHTML = ""
-        let officerTarget = document.querySelector(".officer-list")
+        let officerTarget = document.querySelector(".info-container")
 
         // for (let i=0; i<Officers.length; i++) {
         //     officerHTML += officer(Officers[i])
@@ -21,8 +21,10 @@ export const OfficerList = () => {
 
         Officers.forEach(officerObject => officerHTML += officer(officerObject))
 
-
-
-        officerTarget.innerHTML = officerHTML;
+        officerTarget.innerHTML = `<h2>Officers</h2><div class="officer-list">${officerHTML}</div>`;
     })
 }
+
+document.querySelector("#officers-nav-link").addEventListener("click", () => {
+    OfficerList()
+})
