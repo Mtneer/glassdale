@@ -5,11 +5,11 @@ export const useConvictions = () => {
 }
 
 export const getConvictions = () => {
-    return fetch("https://criminals.glassdale.us/convictions")
+    return fetch("https://criminals.glassdale.us/crimes")
         .then(response => response.json())
         .then(
             parsedConvictions => {
-                console.table(parsedConvictions)
+                // console.table(parsedConvictions)
                 convictions = parsedConvictions
             }
         )
