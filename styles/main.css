@@ -29,7 +29,7 @@ letter-spacing: 2px;
     margin: 0.5em;
     padding: 0.5em;
     width: 15vw;
-    height: 25vh;
+    height: max-content;
 }
 
 .dark-background{
