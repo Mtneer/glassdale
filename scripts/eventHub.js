@@ -1,4 +1,6 @@
 import { CriminalList, alibi } from './criminals/criminalList.js'
+import { saveNote } from './notes/noteDataProvider.js'
+import { NoteList } from './notes/noteList.js'
 
 const eventHub = document.querySelector("#container")
 eventHub.addEventListener("change", (eventObject) => {
@@ -13,11 +15,27 @@ eventHub.addEventListener("change", (eventObject) => {
     }   
 })
 
-const eventHubClick = document.querySelector("#container")
-eventHubClick.addEventListener("click", (eventObject) => {
+eventHub.addEventListener("click", (eventObject) => {
     if (eventObject.target.id.includes("associates")) {
         const criminalID = eventObject.target.id.split("--")[1];
         // id = "associates--#"
         alibi(criminalID)
-    }   
+    } else if (eventObject.target.id === "saveNote") {
+        console.log(eventObject)
+        // Make a new object representation of a note
+        const newNote = {
+            date: eventObject.target.form[1].value,
+            suspect: eventObject.target.form[2].value,
+            note: eventObject.target.form[3].value
+        }
+        console.log(newNote)
+
+        // Change API state and application state
+        saveNote(newNote)
+        .then(NoteList) // Refresh your list of notes once you've saved your new one
+    } 
 })
+
+// const NoteForm = () => {
+    // rest of the code here
+// }

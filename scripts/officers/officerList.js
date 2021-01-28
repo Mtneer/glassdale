@@ -3,7 +3,7 @@ import { useOfficers, getOfficers} from './OfficersProvider.js'
 import { officer } from './officer.js'
 
 
-const OfficerList = () => {
+export const OfficerList = () => {
     getOfficers().then(() => {
         let Officers = useOfficers();
         
@@ -25,6 +25,3 @@ const OfficerList = () => {
     })
 }
 
-document.querySelector("#officers-nav-link").addEventListener("click", () => {
-    OfficerList()
-})

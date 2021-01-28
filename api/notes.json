@@ -1,0 +1,16 @@
+{
+  "notes": [
+    {
+      "date": "2021-01-28",
+      "suspect": "tommy",
+      "note": "it was him",
+      "id": 1
+    },
+    {
+      "date": "2021-01-28",
+      "suspect": "David",
+      "note": "It was me",
+      "id": 2
+    }
+  ]
+}
