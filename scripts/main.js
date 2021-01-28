@@ -1,9 +1,11 @@
 import { } from './criminals/criminalList.js'
 import { } from './officers/officerList.js'
 import { } from './facility/facilityList.js'
+import { } from './witnesses/witnessList.js'
 import { ConvictionSelect } from './convictions/ConvictionSelection.js'
 import { OfficerSelect } from './officers/OfficerSelection.js'
-import {} from './eventHub.js'
+import { } from './eventHub.js'
+
 ConvictionSelect() 
 OfficerSelect()
 
