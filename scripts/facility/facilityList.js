@@ -3,7 +3,7 @@ import { useFacility, getFacility} from './FacilityProvider.js'
 import { facility } from './facility.js'
 
 
-const FacilityList = () => {
+export const FacilityList = () => {
     getFacility().then(() => {
         let Facility = useFacility();
         
@@ -14,7 +14,3 @@ const FacilityList = () => {
 
     })
 }
-
-document.querySelector("#facilities-nav-link").addEventListener("click", () => {
-    FacilityList()
-})

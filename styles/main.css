@@ -32,6 +32,12 @@ letter-spacing: 2px;
     justify-content: space-evenly;
 }
 
+.flex-container-column {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
 .card {
     border: 1px solid black;
     margin: 0.5em;

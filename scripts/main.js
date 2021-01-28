@@ -5,6 +5,7 @@ import { } from './witnesses/witnessList.js'
 import { ConvictionSelect } from './convictions/ConvictionSelection.js'
 import { OfficerSelect } from './officers/OfficerSelection.js'
 import { } from './eventHub.js'
+import { } from './navModule.js'
 
 ConvictionSelect() 
 OfficerSelect()

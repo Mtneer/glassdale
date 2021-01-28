@@ -49,7 +49,3 @@ export const alibi = (criminalID) => {
         return popUpTarget.innerHTML
     })
 }
-
-document.querySelector("#criminals-nav-link").addEventListener("click", () => {
-    CriminalList()
-})

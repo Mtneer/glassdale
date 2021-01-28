@@ -3,7 +3,7 @@ import { useWitness, getWitness} from './WitnessProvider.js'
 import { witness } from './witness.js'
 
 
-const witnessList = () => {
+export const witnessList = () => {
     getWitness().then(() => {
         let witnesses = useWitness();
         
@@ -16,6 +16,3 @@ const witnessList = () => {
     })
 }
 
-document.querySelector("#witness-nav-link").addEventListener("click", () => {
-    witnessList()
-})

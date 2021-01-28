@@ -3,7 +3,7 @@ import { useConvictions, getConvictions} from './ConvictionsProvider.js'
 import { conviction } from './conviction.js'
 
 
-const ConvictionList = () => {
+export const ConvictionList = () => {
     getConvictions().then(() => {
         let Convictions = useConvictions();
         
@@ -13,7 +13,3 @@ const ConvictionList = () => {
         convictionTarget.innerHTML = `<h2>Convictions</h2><div class="conviction-list">${convictionHTML}</div>`;
     })
 }
-
-document.querySelector("#convictions-nav-link").addEventListener("click", () => {
-    ConvictionList()
-})
