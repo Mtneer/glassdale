@@ -28,23 +28,25 @@ export const CriminalList = (filter) => {
 
 export const alibi = (criminalID) => {
     criminalID = parseInt(criminalID)
-    let popUpTarget = document.querySelector("main"); 
+    let popUpTarget = document.querySelector(".modal-body"); 
+    popUpTarget.innerHTML = " "
     let alibiPopUpHTML = ""
 
     getCriminals().then(() => {
         let criminals = useCriminals();
         criminals = criminals.find(perp => {
             return (perp.id === criminalID)})
-
+        console.log(criminals)
         criminals.known_associates.forEach(associate => {
-            alibiPopUpHTML += ` <dialog onclick>
-            <p>Known Associate: ${associate.name}</p>
-            <p>Alibi: ${associate.alibi}</p></dialog> `
+            alibiPopUpHTML += ` 
+                <p><strong>Name:</strong> ${associate.name}</p>
+                <p><strong>Alibi:</strong> ${associate.alibi}</p>
+            `
         })
         console.log(alibiPopUpHTML)
 
         popUpTarget.innerHTML += alibiPopUpHTML
-        return popUpTarget
+        return popUpTarget.innerHTML
         
     })
 }
