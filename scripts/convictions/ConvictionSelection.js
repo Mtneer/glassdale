@@ -15,16 +15,15 @@ export const ConvictionSelect = () => {
 }
 
 const render = convictionsCollection => {
-    
-    // const alphabeticalConvictions = convictionsCollection.map(crime => { return crime.name }).sort()
-
+ 
     contentTarget.innerHTML = `
         <select class="dropdown" id="crimeSelect">
             <option value="0">Please select a crime...</option>
             ${
-                convictionsCollection.map(crime => { return crime.name }).sort().map(crime => {return `<option>${crime}</option>`})
+                convictionsCollection.sort((crimeA, crimeB) => {return (crimeA.name < crimeB.name ? -1 : 1)}).map(crime => {return `<option>${crime.name}</option>`})
             }
         </select>
     `
 }
 
+// convictionsCollection.map(crime => { return crime.name }).sort().map(crime => {return `<option>${crime}</option>`})
