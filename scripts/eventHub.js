@@ -16,12 +16,8 @@ eventHub.addEventListener("change", (eventObject) => {
 const eventHubClick = document.querySelector("#container")
 eventHubClick.addEventListener("click", (eventObject) => {
     if (eventObject.target.id.includes("associates")) {
-        const targetID = eventObject.target.id;
+        const criminalID = eventObject.target.id.split("--")[1];
         // id = "associates--#"
-        const idEndIndex = targetID.length-1
-        const criminalID = targetID[11,idEndIndex]
-        // const criminalID = targetID.split("--")[1]
-        
         alibi(criminalID)
     }   
 })

@@ -2,7 +2,6 @@
 import { useCriminals, getCriminals} from './CriminalsProvider.js'
 import { criminal } from './criminal.js'
 
-
 export const CriminalList = (filter) => {
     let criminalTarget = document.querySelector(".info-container")
     let criminalHTML = ""
@@ -34,20 +33,20 @@ export const alibi = (criminalID) => {
 
     getCriminals().then(() => {
         let criminals = useCriminals();
+
         criminals = criminals.find(perp => {
             return (perp.id === criminalID)})
-        console.log(criminals)
+
         criminals.known_associates.forEach(associate => {
             alibiPopUpHTML += ` 
                 <p><strong>Name:</strong> ${associate.name}</p>
                 <p><strong>Alibi:</strong> ${associate.alibi}</p>
             `
         })
-        console.log(alibiPopUpHTML)
 
         popUpTarget.innerHTML += alibiPopUpHTML
+
         return popUpTarget.innerHTML
-        
     })
 }
 
