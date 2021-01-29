@@ -12,10 +12,10 @@ export const NoteForm = () => {
         <input type="text" name="suspect" id="suspect">
                     
         <label for="noteText">Note</label>
-        <input type="text" name="noteText" id="noteText">
-
-        <!-- Record Entry Button -->
-        <button id="saveNote">Save Note</button>
+        <textarea name="noteText" id="noteText" cols="30" rows="10"></textarea>
+        
+    <!-- Record Entry Button -->
+    <button id="saveNote">Save Note</button>
     </fieldset>
     </form>
     `

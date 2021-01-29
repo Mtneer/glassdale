@@ -28,7 +28,6 @@ export const CriminalList = (filter) => {
 export const alibi = (criminalID) => {
     criminalID = parseInt(criminalID)
     let popUpTarget = document.querySelector(".modal-body"); 
-    popUpTarget.innerHTML = " "
     let alibiPopUpHTML = ""
 
     getCriminals().then(() => {
@@ -44,7 +43,7 @@ export const alibi = (criminalID) => {
             `
         })
 
-        popUpTarget.innerHTML += alibiPopUpHTML
+        popUpTarget.innerHTML = alibiPopUpHTML
 
         return popUpTarget.innerHTML
     })
