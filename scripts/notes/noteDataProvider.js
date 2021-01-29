@@ -5,17 +5,18 @@ export const useNotes = () => {
 }
 
 export const getNotes = () => {
+    // debugger
     return fetch("http://localhost:8088/notes")
         .then(response => response.json())
         .then(
             parsedNotes => {
-                // console.table(parsedNotes);
                 notes = parsedNotes
             }
         )
 }
 
 export const saveNote = note => {
+    // debugger
     return fetch('http://localhost:8088/notes', {
         method: "POST",
         headers: {
@@ -23,5 +24,4 @@ export const saveNote = note => {
         },
         body: JSON.stringify(note)
     })
-    .then(getNotes) // After we add a note, get them all again so our new note appears in our collection
 }

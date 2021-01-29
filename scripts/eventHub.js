@@ -17,11 +17,14 @@ eventHub.addEventListener("change", (eventObject) => {
 
 eventHub.addEventListener("click", (eventObject) => {
     if (eventObject.target.id.includes("associates")) {
+        console.log(eventObject.target.id)
         const criminalID = eventObject.target.id.split("--")[1];
         // id = "associates--#"
         alibi(criminalID)
+
     } else if (eventObject.target.id === "saveNote") {
         console.log(eventObject)
+        eventObject.preventDefault()
         // Make a new object representation of a note
         const newNote = {
             date: eventObject.target.form[1].value,
@@ -35,7 +38,3 @@ eventHub.addEventListener("click", (eventObject) => {
         .then(NoteList) // Refresh your list of notes once you've saved your new one
     } 
 })
-
-// const NoteForm = () => {
-    // rest of the code here
-// }
