@@ -12,7 +12,7 @@ export const NoteForm = () => {
                 
                 <label for="suspect">Suspect</label>
                 <select class="dropdown" name="suspect" id="criminalSelect">
-                ${CriminalSelect()}
+                    ${CriminalSelect()}
                 </select>
 
                 <label for="noteText">Note</label>

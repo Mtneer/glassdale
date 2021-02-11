@@ -1,6 +1,6 @@
 import { CriminalList, alibi } from './criminals/criminalList.js'
 import { saveNote } from './notes/noteDataProvider.js'
-import { NoteList } from './notes/noteList.js'
+import { printNoteCards } from './notes/noteList.js'
 
 const eventHub = document.querySelector("#container")
 eventHub.addEventListener("change", (eventObject) => {
@@ -35,6 +35,6 @@ eventHub.addEventListener("click", (eventObject) => {
 
         // Change API state and application state
         saveNote(newNote)
-        .then(NoteList) // Refresh your list of notes once you've saved your new one
+        .then(printNoteCards) // Refresh your list of notes once you've saved your new one
     } 
 })
