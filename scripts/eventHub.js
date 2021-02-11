@@ -27,9 +27,9 @@ eventHub.addEventListener("click", (eventObject) => {
         eventObject.preventDefault()
         // Make a new object representation of a note
         const newNote = {
-            date: eventObject.target.form[1].value,
-            suspect: eventObject.target.form[2].value,
-            note: eventObject.target.form[3].value
+            date: document.getElementById("noteDate").value,
+            suspectID: document.getElementById("criminalSelect").value,
+            note: document.getElementById("noteText").value
         }
         console.log(newNote)
 

@@ -1,82 +1,16 @@
 {
   "notes": [
     {
-      "date": "2021-01-28",
-      "suspect": "tommy",
-      "note": "it was him",
+      "date": "2021-02-10",
+      "suspectID": "12",
+      "note": "Miss Peacock",
       "id": 1
     },
     {
-      "date": "2021-01-28",
-      "suspect": "David",
-      "note": "It was me",
+      "date": "2021-02-04",
+      "suspectID": "96",
+      "note": "He is def Mr. White",
       "id": 2
-    },
-    {
-      "date": "2021-01-29",
-      "suspect": "jordan",
-      "note": "it was her",
-      "id": 3
-    },
-    {
-      "date": "2021-01-29",
-      "suspect": "courtney",
-      "note": "it wasn't courtney",
-      "id": 4
-    },
-    {
-      "date": "2021-01-29",
-      "suspect": "tommy",
-      "note": "it was him",
-      "id": 5
-    },
-    {
-      "date": "2021-01-29",
-      "suspect": "aaron",
-      "note": "it was for sure aaron",
-      "id": 6
-    },
-    {
-      "date": "2021-01-29",
-      "suspect": "David",
-      "note": "It was me",
-      "id": 7
-    },
-    {
-      "date": "2021-01-29",
-      "suspect": "jordan",
-      "note": "she broke my computer",
-      "id": 8
-    },
-    {
-      "date": "2021-01-29",
-      "suspect": "tommy",
-      "note": "it wasn't courtney",
-      "id": 9
-    },
-    {
-      "date": "2021-01-29",
-      "suspect": "courtney",
-      "note": "it wasn't courtney",
-      "id": 10
-    },
-    {
-      "date": "2021-01-29",
-      "suspect": "courtney",
-      "note": "it wasn't courtney",
-      "id": 11
-    },
-    {
-      "date": "2021-01-30",
-      "suspect": "courtney",
-      "note": "it was him",
-      "id": 12
-    },
-    {
-      "date": "2021-01-29",
-      "suspect": "David",
-      "note": "it was him",
-      "id": 13
     }
   ]
 }
