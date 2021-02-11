@@ -1,11 +1,10 @@
-import { } from './criminals/criminalList.js'
-import { } from './officers/officerList.js'
-import { } from './facility/facilityList.js'
-import { } from './witnesses/witnessList.js'
+import { getCriminals, useCriminals } from './criminals/CriminalsProvider.js'
 import { ConvictionSelect } from './convictions/ConvictionSelection.js'
 import { OfficerSelect } from './officers/OfficerSelection.js'
 import { } from './eventHub.js'
 import { } from './navModule.js'
+
+getCriminals()
 
 ConvictionSelect() 
 OfficerSelect()
