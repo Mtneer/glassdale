@@ -25,3 +25,9 @@ export const saveNote = note => {
         body: JSON.stringify(note)
     })
 }
+
+export const deleteNote = noteID => {
+    return fetch(`http://localhost:8088/notes/${noteID}`, {
+        method: "DELETE",
+    })
+}

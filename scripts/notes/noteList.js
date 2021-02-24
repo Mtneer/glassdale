@@ -34,7 +34,7 @@ export const printNoteCards = () => {
         let criminals = useCriminals();
         
         noteHTML = notes.sort((noteA, noteB) => noteA.date - noteB.date).map(note => {
-            const suspect = criminals.find(criminal => criminal.id === parseInt(note.suspectID))
+            const suspect = criminals.find(criminal => criminal.id === note.suspectID)
             
             const html = noteCard(note, suspect)
             return html

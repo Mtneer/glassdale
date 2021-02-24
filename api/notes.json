@@ -1,22 +1,28 @@
 {
   "notes": [
     {
-      "date": "2021-02-10",
-      "suspectID": "12",
-      "note": "Miss Peacock",
-      "id": 1
-    },
-    {
       "date": "2021-02-04",
-      "suspectID": "96",
+      "suspectID": 96,
       "note": "He is def Mr. White",
       "id": 2
     },
     {
       "date": "2021-02-11",
-      "suspectID": "79",
+      "suspectID": 79,
       "note": "AMANDA!? More like Scarlett...",
       "id": 3
+    },
+    {
+      "date": "2021-02-12",
+      "suspectID": 12,
+      "note": "She really is Miss Peacock",
+      "id": 4
+    },
+    {
+      "date": "2021-02-24",
+      "suspectID": 13,
+      "note": "Ruben!",
+      "id": 5
     }
   ]
 }
