@@ -8,10 +8,12 @@ eventHub.addEventListener("change", (eventObject) => {
         const convictionFilter = eventObject.target.value;
         
         CriminalList(convictionFilter)
+        document.querySelector("#officerSelect").value = "0";
     } else if (eventObject.target.id === "officerSelect") {
         const officerFilter = eventObject.target.value;
         
         CriminalList(officerFilter)
+        document.querySelector("#crimeSelect").value = "0";
     }   
 })
 

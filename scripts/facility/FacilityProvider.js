@@ -1,8 +1,6 @@
 let facility = []
 
-export const useFacility = () => {
-    return facility.slice()
-}
+export const useFacility = () => facility.slice()
 
 export const getFacility = () => {
     return fetch("https://criminals.glassdale.us/facilities")
